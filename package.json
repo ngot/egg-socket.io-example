@@ -1,0 +1,48 @@
+{
+  "name": "egg-socket.io-example",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "egg-bin dev --cluster --sticky",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "start": "eggctl start --daemon --sticky",
+    "stop": "eggctl stop",
+    "test-local": "egg-bin test",
+    "ci": "npm run lint && npm run cov",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "autod": "autod"
+  },
+  "dependencies": {
+    "egg": "^2.0.0",
+    "egg-scripts": "^2.12.0",
+    "egg-socket.io": "^4.0.0"
+  },
+  "devDependencies": {
+    "autod": "^3.1.0",
+    "egg-bin": "^4.3.6",
+    "egg-ci": "^1.13.1",
+    "egg-mock": "^3.25.0",
+    "eslint": "^6.8.0",
+    "eslint-config-egg": "^8.0.0",
+    "socket.io-client": "^2.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngot/egg-socket.io-example.git"
+  },
+  "ci": {
+    "type": "travis",
+    "version": "10, 12",
+    "services": "redis-server"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/ngot/egg-socket.io-example/issues"
+  },
+  "homepage": "https://github.com/ngot/egg-socket.io-example#readme",
+  "author": "ngot <zhuanghengfei@gmail.com>",
+  "license": "MIT"
+}
